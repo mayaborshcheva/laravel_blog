@@ -87,10 +87,10 @@ class PostController extends Controller
         $request->validate([
             'title' => 'required',
             'post_body' => 'required',
-
+            'post_url'
         ]);
 
-        $update = ['title' => $request->title, 'post_body' => $request->post_body];
+        $update = ['title' => $request->title, 'post_body' => $request->post_body, 'post_url' => $request->post_url];
 
         Post::where('id',$id)->update($update);
 

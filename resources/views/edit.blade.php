@@ -33,7 +33,14 @@
                     <span class="text-danger">{{ $errors->first('post_body') }}</span>
                 </div>
             </div>
+            <div class="col-md-12">
+                <div class="form-group">
 
+                    <input id="image_url" type="hidden" name="post_url" class="form-control"
+                           value="{{ $post_info->post_url }}">
+
+                </div>
+            </div>
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary">Submit</button>
 
@@ -42,6 +49,20 @@
         </div>
 
     </form>
+    <div class="float-left">
+        <div class="mt-3">
+            <button type="button" class="btn btn-success" onclick="drawImage();">Search Image</button>
+        </div>
+        <div class="mt-3">
+            <button type="button" class="btn btn-success" onclick="insertImage();">Insert Image</button>
+        </div>
+    </div>
+    <div class="float-left">
+        <img id='query-image' style="width: 200px; height: auto;"/>
+    </div>
+
+
+
 
 
 @endsection

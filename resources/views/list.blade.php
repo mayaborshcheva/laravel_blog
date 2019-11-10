@@ -19,7 +19,7 @@
                 <div class="w-100">
                     <h2>{{ $post->title }}</h2>
                     <div>
-
+                        <img src="{{ $post->post_url }}" alt="">
                         <h4>{{ $post->post_body }}</h4>
                     </div>
 
